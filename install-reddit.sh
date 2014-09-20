@@ -210,7 +210,7 @@ function clone_reddit_plugin_repo {
     clone_reddit_repo $1 reddit/reddit-plugin-$1
 }
 
-clone_reddit_repo reddit reddit/reddit
+clone_reddit_repo reddit annerajb/reddit
 clone_reddit_repo i18n reddit/reddit-i18n
 clone_reddit_plugin_repo about
 clone_reddit_plugin_repo liveupdate
