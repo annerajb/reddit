@@ -611,13 +611,13 @@ class Reddit(Templated):
         elif self.show_wiki_actions:
             ps.append(self.wiki_actions_menu())
 
-        if self.create_reddit_box and c.user_is_loggedin:
-            delta = datetime.datetime.now(g.tz) - c.user._date
-            if delta.days >= g.min_membership_create_community:
-                ps.append(SideBox(_('Create your own subreddit'),
-                           '/subreddits/create', 'create',
-                           subtitles = rand_strings.get("create_reddit", 2),
-                           show_cover = True, nocname=True))
+        #if self.create_reddit_box and c.user_is_loggedin:
+            #delta = datetime.datetime.now(g.tz) - c.user._date
+            #if delta.days >= g.min_membership_create_community:
+                #ps.append(SideBox(_('Create your own subreddit'),
+                 #          '/subreddits/create', 'create',
+                           #subtitles = rand_strings.get("create_reddit", 2),
+                           #show_cover = True, nocname=True))
 
         if not isinstance(c.site, FakeSubreddit) and not c.cname:
             moderators = self.sr_moderators()

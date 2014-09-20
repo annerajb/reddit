@@ -96,12 +96,6 @@ ${thing.formtabs_menu}
 </div>
 %endif
 
-<div class="spacer">
-  <%utils:round_field title="${_('subreddit')}" id="reddit-field">
-    ${SubredditSelector(thing.default_sr, extra_subreddits=thing.extra_subreddits)}
-  </%utils:round_field>
-</div>
-
 ${thing.captcha}
     
 </div>
