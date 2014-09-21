@@ -551,7 +551,9 @@ class Subreddit(Thing, Printable, BaseSite):
     def can_submit_text(self, user):
         if c.user_is_admin or self.is_moderator_with_perms(user, "posts"):
             return True
-        return "self" in self.allowed_types
+        else 
+            return False
+        #return "self" in self.allowed_types
 
     def can_ban(self, user):
         return (user
